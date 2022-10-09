@@ -2,7 +2,7 @@ const { app, BrowserWindow } = require('electron')
 const path = require("path");
 const isDev = require('electron-is-dev');
 
-const createWindow = () => {
+function createWindow () {
     const win = new BrowserWindow({
       icon: './icon/icon.png',
       show: false,
@@ -22,7 +22,7 @@ const createWindow = () => {
     win.maximize();
     win.show();
 
-    win.loadURL(isDev ? 'http://localhost:5173/': `https://www.google.com/`);
+    win.loadURL(isDev ? 'http://localhost:5173/': path.join(__dirname, `/dist/tas-x-frontend/index.html`),);
 }
 
 app.whenReady().then(() => {
