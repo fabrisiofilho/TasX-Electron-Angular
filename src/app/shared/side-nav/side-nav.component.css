@@ -1,0 +1,40 @@
+.btn:hover {
+  background-color: #141414;
+  color: white;
+}
+
+.btn-selected {
+  border-left: 1px solid #0094FF;
+  background-color: #141414;
+  color: white !important;
+  border-radius: 0px !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+.btn {
+  color: rgb(171, 171, 171);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .btn {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    display: none;
+  }
+
+  .icon {
+    margin-right: 0 !important;
+  }
+
+  .tag {
+    display: none;
+  }
+}

@@ -4,17 +4,19 @@ const isDev = require('electron-is-dev');
 
 function createWindow () {
     const win = new BrowserWindow({
-      icon: './icon/icon.png',
+      minWidth: 800,
+      minHeight: 600,
+      icon: './src/assets/icon/icon.png',
       show: false,
       darkTheme: true,
       autoHideMenuBar: true,
       titleBarStyle: 'hidden',
       titleBarOverlay: {
-        color: '#090909',
+        color: '#000000',
         symbolColor: '#0094FF',
         height: 30
       },
-      backgroundColor: '#090909',
+      backgroundColor: '#000000',
       webPreferences: {
         nodeIntegration: true
       }
@@ -22,7 +24,7 @@ function createWindow () {
     win.maximize();
     win.show();
 
-    win.loadURL(isDev ? 'http://localhost:5173/': path.join(__dirname, `/dist/tas-x-frontend/index.html`),);
+    win.loadURL(isDev ? 'http://localhost:4200/': path.join(__dirname, `/dist/tas-x-frontend/index.html`),);
 }
 
 app.whenReady().then(() => {

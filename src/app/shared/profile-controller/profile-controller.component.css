@@ -1,0 +1,51 @@
+.btn:hover {
+  color: white;
+}
+
+.btn {
+  color: rgb(171, 171, 171);
+  cursor: pointer;
+}
+
+.btn-close {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: rgb(171, 171, 171);
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  background-color: #2c2c2c;
+  color: white;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+}
+
+@media only screen and (max-width: 900px) {
+  .btn {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    display: none;
+  }
+
+  .icon {
+    margin-right: 0 !important;
+  }
+  .square {
+    width: 35px;
+    height: 35px;
+  }
+}

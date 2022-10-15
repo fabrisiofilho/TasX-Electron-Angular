@@ -1,0 +1,65 @@
+<div class="flex flex-column p-1 py-5 relative">
+  <div class="absolute btn-close" style="top: 10px; right: 10px;" (click)="closeSide()">
+    <fa-icon [icon]="faX" [size]=sizeSm2 class="icon">
+    </fa-icon>
+  </div>
+  <div class="flex justify-content-center align-items-center">
+    <div style="border-radius: 50%; overflow: hidden;" class="square">
+      <avatar></avatar>
+    </div>
+  </div>
+  <div class="flex flex-column align-items-center mb-3">
+    <h2 class="mb-2">
+      Fabrisio Filho
+    </h2>
+    <p style="color: rgb(92, 92, 92);" class="mt-2 px-4 text-center">
+      Sou um desenvolvedor de software web, atualmente trabalho no Senai Soluções digitais.
+    </p>
+    <div class="grid justify-content-center align-items-center">
+      <office [office]="'Software Developer'" class="col-fixed"></office>
+    </div>
+  </div>
+
+  <p-divider align="center">
+    Dados pessoais
+  </p-divider>
+
+  <div class="flex flex-column p-2 row-gap-1">
+
+    <a [routerLink]="['/notions']" class="btn flex align-items-center px-3 py-2 overflow-hidden" style="border-radius: 10px;text-decoration: none; font-weight: 500;">
+      <fa-icon [icon]="faEnvelope" [size]=sizeSm class="icon mr-3">
+      </fa-icon>
+      <p class="m-0 text">fabrisiopbf@gmail.com</p>
+    </a>
+
+    <a [routerLink]="['/notions']" class="btn flex align-items-center px-3 py-2 overflow-hidden" style="border-radius: 10px;text-decoration: none; font-weight: 500;">
+      <fa-icon [icon]="faPhone" [size]=sizeSm class="icon mr-3">
+      </fa-icon>
+      <p class="m-0 text">48 999054017</p>
+    </a>
+
+    <a [routerLink]="['/notions']" class="btn flex align-items-center px-3 py-2 overflow-hidden" style="border-radius: 10px;text-decoration: none; font-weight: 500;">
+      <fa-icon [icon]="faComment" [size]=sizeSm class="icon mr-3">
+      </fa-icon>
+      <p class="m-0 text">@fabrisiofilho</p>
+    </a>
+
+    <a [routerLink]="['/notions']" class="btn flex align-items-center px-3 py-2 overflow-hidden" style="border-radius: 10px;text-decoration: none; font-weight: 500;">
+      <fa-icon [icon]="faGit" [size]=sizeSm class="icon mr-3">
+      </fa-icon>
+      <p class="m-0 text">fabrisiofilho</p>
+    </a>
+  </div>
+
+  <p-divider align="center">
+    Configurações
+  </p-divider>
+
+  <div class="flex flex-column p-2 row-gap-1">
+    <a [routerLink]="['/notions']" class="btn flex align-items-center px-3 py-2 overflow-hidden" style="border-radius: 10px;text-decoration: none; font-weight: 500;">
+      <fa-icon [icon]="faGear" [size]=sizeSm class="icon mr-3">
+      </fa-icon>
+      <p class="m-0 text">Configurações</p>
+    </a>
+  </div>
+</div>

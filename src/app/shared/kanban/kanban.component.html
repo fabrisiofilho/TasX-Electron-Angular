@@ -1,0 +1,15 @@
+<div class="flex gap-2" cdkDropListGroup>
+  <kanban-column
+    #column
+    *ngFor="let item of columnList;"
+    cdkDropList
+    [cdkDropListData]="column.listCard"
+    (cdkDropListDropped)="drop($event)"
+    [listCard]="[]"
+    >
+  </kanban-column>
+  <div class="btn flex justify-content-center align-items-center py-2 overflow-hidden mt-1" style="border-radius: 5px; background-color: rgb(37, 37, 37);" (click)="createColumn()">
+    <fa-icon [icon]="faPlus" [size]=sizeSm style="color: #989898;">
+    </fa-icon>
+  </div>
+</div>

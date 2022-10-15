@@ -1,0 +1,45 @@
+.body-content {
+  width: 100%;
+  height: 100vh
+}
+
+.side-nav{
+  width: 260px;
+  height: 100%;
+  background-color: #000000;
+  transition: 0.2s width;
+}
+
+.profile-nav {
+  width: 350px;
+  height: 100%;
+  background-color: #141414;
+  transition: 0.2s width;
+}
+
+.content {
+  background-color: #141414;
+  width: calc(100% - 250px);
+  height: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .side-nav {
+    width: 60px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .profile-nav {
+    display: none;
+  }
+}
+
+::ng-deep .p-divider.p-divider-horizontal {
+  margin: 7px 0;
+}
+
+::ng-deep  .p-divider .p-divider-content {
+  background-color: transparent;
+  color: gray;
+}

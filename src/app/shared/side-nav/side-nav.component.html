@@ -1,0 +1,45 @@
+<div class="flex flex-column p-1 py-3">
+  <div class="flex justify-content-center align-items-center mb-3">
+    <div>
+      <img src="assets/icon/icon.png" alt="tasX" style="width: 35px; height: auto;">
+    </div>
+  </div>
+  <div class="flex flex-column p-2 row-gap-1">
+
+    <a [routerLink]="['']" [ngClass]="isActivated('/') ? 'btn-selected': 'btn'" class="btn flex align-items-center px-3 py-2 overflow-hidden" style="border-radius: 10px; text-decoration: none; font-weight: 500;">
+      <fa-icon [icon]="faNewspaper" [size]=sizeSm class="icon mr-3">
+      </fa-icon>
+      <p class="m-0 text">Novidades</p>
+    </a>
+
+    <a [routerLink]="['/modules']" [ngClass]="isActivated('/modules') ? 'btn-selected': 'btn'" class="btn flex align-items-center px-3 py-2 overflow-hidden" style="border-radius: 10px; text-decoration: none; font-weight: 500;">
+      <fa-icon [icon]="faCubes" [size]=sizeSm class="icon mr-3">
+      </fa-icon>
+      <p class="m-0 text">Modulos</p>
+    </a>
+
+    <a [routerLink]="['/about']" [ngClass]="isActivated('/about') ? 'btn-selected': 'btn'" class="btn flex align-items-center px-3 py-2 overflow-hidden" style="border-radius: 10px; text-decoration: none; font-weight: 500;">
+      <fa-icon [icon]="faRadio" [size]=sizeSm class="icon mr-3">
+      </fa-icon>
+      <p class="m-0 text">Sobre</p>
+    </a>
+
+  </div>
+
+  <p-divider align="center">Projetos</p-divider>
+
+  <div class="flex flex-column p-2 row-gap-1">
+    <a [ngClass]="isActivated('/project/' + project.id) ? 'btn-selected': 'btn'" (click)="openProject(project.id)" *ngFor="let project of projects" class="btn flex align-items-center px-3 py-2 overflow-hidden" style="border-radius: 10px; text-decoration: none; font-weight: 500;" pTooltip={{project.name}}>
+      <fa-icon [icon]="faProject" [size]=sizeSm class="icon mr-3">
+      </fa-icon>
+      <p class="m-0 text text-center">{{project.name}}</p>
+      <span class="right-0 tag">
+        <tag-tasx [status]=project.status [marginLeft]="'8px'"></tag-tasx>
+      </span>
+    </a>
+    <div class="btn flex justify-content-center align-items-center py-2 overflow-hidden mt-1" style="border-radius: 10px; background-color: #141414;" (click)="createProject()">
+      <fa-icon [icon]="faPlus" [size]=sizeSm style="color: #989898;">
+      </fa-icon>
+    </div>
+  </div>
+</div>
