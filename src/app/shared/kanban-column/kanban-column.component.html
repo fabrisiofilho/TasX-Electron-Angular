@@ -1,12 +1,14 @@
-<div style="width: 280px;">
-  <div>
-    <h3 contenteditable="true" style="outline: none;" #x (input)="alterTitleColumn(x.innerText)">{{column.title}}</h3>
-  </div>
-
+<div style="width: 280px;" class="h-full">
   <div class="flex flex-column gap-2">
-    <div class="btn flex justify-content-center align-items-center py-2 overflow-hidden mt-1" style="border-radius: 5px; background-color: rgb(37, 37, 37);" (click)="createTask()">
-      <fa-icon [icon]="faPlus" [size]=sizeSm style="color: #989898;">
-      </fa-icon>
+    <div class="header">
+      <div class="flex justify-content-between align-items-center">
+        <h3 contenteditable="true" style="outline: none;" #x (input)="alterTitleColumn(x.innerText)">{{column.title}}</h3>
+        <app-button-icon-tas-x [icon]="faX" [isButton]="true" style="color: gray;" (click)="removeColumn()"></app-button-icon-tas-x>
+      </div>
+      <div class="btn flex justify-content-center align-items-center py-2 mt-1" style="border-radius: 5px; background-color: rgb(37, 37, 37);" (click)="createTask()">
+        <fa-icon [icon]="faPlus" [size]=sizeSm style="color: #989898;">
+        </fa-icon>
+      </div>
     </div>
     <kanban-card
       cdkDrag

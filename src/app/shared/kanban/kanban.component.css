@@ -15,3 +15,7 @@
   color: rgb(171, 171, 171);
   cursor: pointer;
 }
+
+.kanban {
+  height: 1fr;
+}

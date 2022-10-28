@@ -1,7 +1,8 @@
 import { CdkDragDrop, CdkDragEnter, CdkDragMove, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import { Component, Input, OnInit } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { SizeProp } from '@fortawesome/fontawesome-svg-core';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPencil, faPlus, faX } from '@fortawesome/free-solid-svg-icons';
 import { CardKaban } from 'src/app/models/card-kanban';
 import { ColumnKanban } from 'src/app/models/column-kanban';
 
@@ -13,8 +14,12 @@ import { ColumnKanban } from 'src/app/models/column-kanban';
 export class KanbanColumnComponent implements OnInit {
 
   @Input()
-  column: ColumnKanban = { id:0, title:'Untitled' };
+  column!: ColumnKanban;
 
+  @Output()
+  removeColumnKanban = new EventEmitter<ColumnKanban>();
+
+  faX = faX;
   faPlus = faPlus;
   sizeSm: SizeProp = "lg";
 
@@ -51,6 +56,10 @@ export class KanbanColumnComponent implements OnInit {
 
   alterTitleColumn(event: any) {
 
+  }
+
+  removeColumn() {
+    this.removeColumnKanban.emit(this.column)
   }
 
 }

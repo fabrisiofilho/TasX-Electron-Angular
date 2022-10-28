@@ -43,3 +43,7 @@
   background-color: transparent;
   color: gray;
 }
+
+.close-side {
+  display: none;
+}

@@ -22,7 +22,7 @@ export class KanbanComponent implements OnInit {
   }
 
   createColumn() {
-    this.columnList.push({id: 0, title: 'Untitled'});
+    this.columnList.push({id: this.columnList.length + 1, title: 'Untitled'});
   }
 
   drop(event: CdkDragDrop<CardKaban[]>) {
@@ -36,4 +36,8 @@ export class KanbanComponent implements OnInit {
     }
   }
 
+  removeColumnKanban(column: ColumnKanban) {
+    console.log(column);
+    this.columnList.splice(this.columnList.indexOf(column), 1);
+  }
 }

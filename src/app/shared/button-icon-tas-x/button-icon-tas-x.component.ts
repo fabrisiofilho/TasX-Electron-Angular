@@ -11,7 +11,10 @@ export class ButtonIconTasXComponent implements OnInit {
   @Input()
   icon?: any;
 
-  sizeSm: SizeProp = "lg";
+  @Input()
+  isButton: boolean = false;
+
+  sizeSm: SizeProp = "1x";
 
   constructor() { }
 

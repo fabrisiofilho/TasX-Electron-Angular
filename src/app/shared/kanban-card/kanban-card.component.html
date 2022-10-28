@@ -1,11 +1,14 @@
 <div class="card p-3">
-  <div class="grid m-0 p-0 gap-1">
-    <tag-tasx [bColor]="'orange'" [color]="'black'" [fontSize]="'12px'" [status]="card.tags" [padding]="'3px 10px'"></tag-tasx>
+  <div class="flex justify-content-between align-items-center">
+    <div class="grid m-0 p-0 gap-1">
+      <tag-tasx [bColor]="'orange'" [color]="'black'" [fontSize]="'12px'" [status]="card.tags" [padding]="'3px 10px'"></tag-tasx>
+    </div>
+    <app-button-icon-tas-x [icon]="faPencil" [isButton]="true" style="color: gray;"></app-button-icon-tas-x>
   </div>
   <div>
-    <h2>{{card.name}}</h2>
+    <h3 class="my-2">{{card.name}}</h3>
   </div>
   <div>
-    <p class="text-center" style="color: rgb(105, 105, 105);">{{card.content}}</p>
+    <p class="my-2" style="color: rgb(105, 105, 105);">{{card.content}}</p>
   </div>
 </div>

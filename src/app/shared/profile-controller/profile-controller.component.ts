@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { SizeProp } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faGear, faPhone, faX } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +9,9 @@ import { faEnvelope, faGear, faPhone, faX } from '@fortawesome/free-solid-svg-ic
   styleUrls: ['./profile-controller.component.css']
 })
 export class ProfileControllerComponent implements OnInit {
+
+  @Output()
+  closeSideProfile = new EventEmitter<any>();
 
   faComment = faInstagram;
   faGear = faGear;
@@ -25,7 +28,7 @@ export class ProfileControllerComponent implements OnInit {
   }
 
   closeSide() {
-
+    this.closeSideProfile.emit()
   }
 
 }

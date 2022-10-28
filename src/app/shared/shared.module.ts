@@ -33,7 +33,7 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
     ButtonTasXComponent,
     ButtonIconTasXComponent,
     AvatarComponent,
-    AvatarGroupsComponent,
+    AvatarGroupsComponent
   ],
   imports: [
     CommonModule,

@@ -3,11 +3,11 @@
     <div class="side-nav border-round-md col-fixed p-0">
       <tasx-sidenav></tasx-sidenav>
     </div>
-    <div class="content border-round-md col overflow-auto">
+    <div class="content border-round-md col overflow-hidden">
       <router-outlet></router-outlet>
     </div>
-    <div class="profile-nav border-round-md col-fixed p-0">
-      <profile></profile>
+    <div class="profile-nav border-round-md col-fixed p-0" [ngClass]="{'close-side': closeSide}">
+      <profile (closeSideProfile)="closeSideProfile()"></profile>
     </div>
   </div>
 </div>
